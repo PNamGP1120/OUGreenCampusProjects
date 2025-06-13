@@ -1,2 +1,2 @@
-# OUGreenPlusProjects
-Website OU Green Plus chia sẻ tin tức, kiến thức và hoạt động bảo vệ môi trường
+# OUGreenCampusProjects
+Website OU Green Campus chia sẻ tin tức, kiến thức và hoạt động bảo vệ môi trường
