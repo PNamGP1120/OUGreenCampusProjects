@@ -1,0 +1,85 @@
+.header {
+  background: #fff;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08); /* Thêm đổ bóng nhẹ */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- Các style mới cho Logo --- */
+.logo {
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.8rem; /* Điều chỉnh kích thước */
+  letter-spacing: -1px;
+  display: flex;
+  align-items: center; /* Căn giữa các thành phần logo */
+}
+
+.ou {
+  color: #0056b3; /* Màu xanh dương đậm */
+}
+
+.green {
+  color: #28a745; /* Màu xanh lá cây */
+}
+
+.plus {
+  color: #28a745;
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-left: 2px;
+  vertical-align: super; /* Đưa dấu + lên trên một chút */
+}
+/* --- Kết thúc style mới cho Logo --- */
+
+
+/* --- Các style cũ được giữ nguyên --- */
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #28a745;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.navLink:hover,
+.activeLink {
+  color: #28a745;
+}
+
+.activeLink::after {
+  width: 100%;
+}

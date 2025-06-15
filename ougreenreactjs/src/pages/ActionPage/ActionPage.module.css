@@ -1,0 +1,192 @@
+:root {
+    --green-primary: #388E3C;  /* Màu xanh lá đậm, chủ đạo */
+    --green-secondary: #4CAF50; /* Màu xanh lá tươi hơn */
+    --green-light-bg: #F1F8E9;  /* Màu nền xanh lá rất nhạt */
+    --text-dark: #212121;
+    --text-light: #616161;
+    --white: #FFFFFF;
+    --border-color: #E0E0E0;
+}
+
+.actionPage {
+    background-color: var(--white);
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 1. Hero Section */
+.hero {
+    position: relative;
+    height: 60vh;
+    background: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2940&auto=format&fit=crop') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.heroOverlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.heroTitle {
+    color: var(--white);
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    margin-bottom: 1rem;
+    max-width: 800px;
+    line-height: 1.2;
+}
+
+.heroSubtitle {
+    color: #E0F2F1;
+    font-size: 1.25rem;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+/* 2. Sứ mệnh (Lĩnh vực hoạt động) */
+.missionSection {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.missionGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.pillarCard {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pillarCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.pillarIcon {
+    font-size: 3.5rem;
+    color: var(--green-primary);
+    margin-bottom: 25px;
+}
+
+.pillarTitle {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.pillarDescription {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* 3. Giá trị cốt lõi */
+.valuesSection {
+    padding: 100px 0;
+    background-color: var(--green-light-bg);
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 60px;
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.valueItem {
+    text-align: center;
+    padding: 20px;
+}
+
+.valueIcon {
+    font-size: 3rem;
+    color: var(--green-primary);
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.valueTitle {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.valueItem p {
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+
+/* 4. Lời kêu gọi hành động */
+.ctaSection {
+    background: linear-gradient(135deg, var(--green-secondary), var(--green-primary));
+    color: var(--white);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.ctaSection h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.ctaSection p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .missionGrid {
+        grid-template-columns: 1fr;
+    }
+    .valuesGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+    .sectionTitle, .ctaSection h2 {
+        font-size: 2.2rem;
+    }
+}

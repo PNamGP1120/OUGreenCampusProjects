@@ -1,0 +1,124 @@
+:root {
+    --green-primary: #2e8540; /* Màu xanh đậm, chủ đạo */
+    --green-light: #e8f5e9; /* Màu nền xanh lá rất nhạt */
+    --text-dark: #212121;
+    --text-light: #666;
+    --white: #FFFFFF;
+    --grey-bg: #f7f7f7;
+    --font-primary: 'Segoe UI', 'Roboto', sans-serif; /* Font hệ thống, sạch sẽ */
+}
+
+.homePage {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Cấu trúc chung */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.preTitle {
+    color: var(--green-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.sectionTitle {
+    font-size: 2.8rem;
+    color: var(--text-dark);
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* 1. Hero Section & Slideshow (Giữ nguyên logic, tinh chỉnh style) */
+.hero { height: 90vh; position: relative; overflow: hidden; }
+.slide { position: absolute; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; transition: opacity 1.5s ease-in-out; }
+.slide.active { opacity: 1; }
+.heroOverlay { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: white; background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)); width: 100%; height: 100%; padding: 20px; }
+.heroOverlay h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; text-shadow: 2px 2px 8px rgba(0,0,0,0.7); }
+.heroOverlay p { font-size: 1.25rem; max-width: 600px; margin-bottom: 2rem; text-shadow: 1px 1px 4px rgba(0,0,0,0.7); }
+.arrow { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.3); color: white; border: none; padding: 15px; cursor: pointer; z-index: 10; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s ease; border-radius: 50%; width: 50px; height: 50px; }
+.arrow:hover { background-color: rgba(0, 0, 0, 0.6); }
+.prev { left: 30px; }
+.next { right: 30px; }
+.dots { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 10; }
+.dot { width: 12px; height: 12px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.5); cursor: pointer; transition: all 0.4s ease; }
+.dot.active { background-color: white; transform: scale(1.2); }
+
+/* 2. Giới thiệu & Số liệu */
+.aboutSection {
+    padding: 80px 0;
+    background-color: var(--white);
+    position: relative;
+}
+
+.aboutGrid { display: grid; grid-template-columns: 4fr 5fr; align-items: center; gap: 60px; }
+.logoImage { max-width: 400px; width: 100%; height: auto; }
+.aboutContent .sectionTitle { text-align: left; margin: 0 0 15px 0; }
+.aboutContent h3 { font-size: 1.8rem; margin-bottom: 20px; color: var(--text-dark); font-weight: 600; }
+.aboutContent p { font-size: 1.1rem; line-height: 1.8; color: var(--text-light); text-align: justify; margin-bottom: 20px; }
+.aboutContent a { align-self: flex-start; }
+
+.metricsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+.metricBox { text-align: center; }
+.metricIcon { font-size: 3rem; color: var(--green-primary); margin-bottom: 10px; }
+.metricValue { font-size: 2.5rem; font-weight: 700; color: var(--text-dark); }
+.metricLabel { font-size: 1rem; color: var(--text-light); }
+
+
+/* 3. Tin tức */
+.newsSection { background-color: var(--grey-bg); padding: 80px 0; }
+.newsSection .sectionTitle, .newsSection .preTitle { text-align: center; }
+.sectionSubtitle { text-align: center; max-width: 600px; margin: -10px auto 50px auto; color: var(--text-light); font-size: 1.1rem; }
+.newsGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+
+
+/* 4. Sự kiện */
+.eventSection { padding: 80px 0; }
+.eventGrid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 5fr 4fr; align-items: center; background-color: var(--green-light); border-radius: 20px; overflow: hidden; }
+.eventContent { padding: 60px; }
+.eventContent .sectionTitle { text-align: left; margin: 0 0 15px 0; }
+.eventDescription { font-size: 1.1rem; margin-bottom: 30px; line-height: 1.7; color: var(--text-light); }
+.eventDetails { display: flex; align-items: center; gap: 10px; font-weight: 500; margin-bottom: 30px; color: var(--text-dark); }
+.eventDetails span { font-size: 1.5rem; color: var(--green-primary); }
+.eventImage { background: url('https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/503340805_1125637639610986_3462026955727955013_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHXriTlaW1IcnRXYnXn8Nmdyl-hHuavhpDKX6Ee5q-GkGUGxdUKzuXSEhsK8oM0p7cIsebzi74uvWsII2sY3hBi&_nc_ohc=kwhG68VrS6gQ7kNvwGIE3AN&_nc_oc=AdkPgvp3S2OpkGOQpCcty-wB6J1qPsJzv5cXO-QT56-yQ8ermfRMZdMZsdlA4vjH9CfCOPvlkrH0HPdmiTdm2mc2&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=BS4L5VqBVfrdGQiqrqDv_g&oh=00_AfN9nEoGBQH2KWAAX_uheh_xH4jnhmzFcHnW4gEFWZkv1g&oe=68541797') no-repeat center center/cover; min-height: 550px; height: 100%; }
+
+
+/* Responsive */
+@media (max-width: 992px) {
+    .aboutGrid { grid-template-columns: 1fr; text-align: center; }
+    .logoImage { max-width: 250px; margin: 0 auto 40px auto; }
+    .aboutContent { text-align: center; }
+    .aboutContent .sectionTitle, .aboutContent h3 { text-align: center; }
+    .aboutContent p { text-align: center; }
+    .aboutContent a { margin: 0 auto; }
+    .metricsGrid { grid-template-columns: 1fr 1fr; }
+    .eventGrid { grid-template-columns: 1fr; }
+    .eventImage { display: none; }
+    .eventContent { text-align: center; }
+}
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.5rem; }
+  .sectionTitle { font-size: 2.2rem; }
+  .newsGrid { grid-template-columns: 1fr; }
+}
+@media (max-width: 576px) {
+    .metricsGrid { grid-template-columns: 1fr 1fr; }
+}
