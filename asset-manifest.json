@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/PNamGP1120/OUGreenCampusProjects.git/static/css/main.cefc0bbe.css",
+    "main.js": "/PNamGP1120/OUGreenCampusProjects.git/static/js/main.4a6a711e.js",
+    "static/js/453.1791b438.chunk.js": "/PNamGP1120/OUGreenCampusProjects.git/static/js/453.1791b438.chunk.js",
+    "static/media/ougreen-logo.png": "/PNamGP1120/OUGreenCampusProjects.git/static/media/ougreen-logo.8381b474e893aa08db6e.png",
+    "index.html": "/PNamGP1120/OUGreenCampusProjects.git/index.html",
+    "main.cefc0bbe.css.map": "/PNamGP1120/OUGreenCampusProjects.git/static/css/main.cefc0bbe.css.map",
+    "main.4a6a711e.js.map": "/PNamGP1120/OUGreenCampusProjects.git/static/js/main.4a6a711e.js.map",
+    "453.1791b438.chunk.js.map": "/PNamGP1120/OUGreenCampusProjects.git/static/js/453.1791b438.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cefc0bbe.css",
+    "static/js/main.4a6a711e.js"
+  ]
+}
